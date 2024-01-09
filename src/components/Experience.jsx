@@ -1,16 +1,7 @@
 import {
-  CameraControls,
-  Dodecahedron,
-  Environment,
-  Grid,
-  MeshDistortMaterial,
   RenderTexture,
 } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { useAtom } from "jotai";
-import { useControls } from "leva";
-import { useEffect, useRef } from "react";
-import { slideAtom } from "./Overlay";
 import { Scene } from "./Scene";
 
 export const scenes = [
@@ -27,13 +18,6 @@ export const scenes = [
 
 export const Experience = () => {
   const viewport = useThree((state) => state.viewport);
-  const { slideDistance } = useControls({
-    slideDistance: {
-      value: 1,
-      min: 0,
-      max: 10,
-    },
-  });
   return (
     <>
       <ambientLight intensity={0.2} />
@@ -42,7 +26,7 @@ export const Experience = () => {
       {scenes.map((scene, index) => (
         <mesh
           key={index}
-          position={[index * (viewport.width + slideDistance), 0, 0]}
+          position={[index * (viewport.width), 0, 0]}
         >
           <planeGeometry args={[viewport.width, viewport.height]} />
           <meshBasicMaterial toneMapped={false}>

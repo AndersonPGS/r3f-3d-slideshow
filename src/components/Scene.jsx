@@ -37,6 +37,7 @@ export const Scene = ({ mainColor, path, ...props }) => {
           minDistance={6}
           maxDistance={10}
           autoRotateSpeed={0.5}
+          enableZoom={false}
         />
         <primitive object={scene} scale={ratioScale} />
         <ambientLight intensity={0.1} color="red" />
@@ -80,13 +81,13 @@ export const Scene = ({ mainColor, path, ...props }) => {
             position={[-5, 0, 1]}
             form="circle" // circle | ring | rect (optional, default = rect)
             intensity={1} // power level (optional = 1)
-            color="green" // (optional = white)
+            color="red" // (optional = white)
             scale={[2, 5]} // Scale it any way you prefer (optional = [1, 1])
             target={[0, 0, 0]}
           />
 
           <Lightformer
-            position={[0, 5, -2]}
+            position={[0, 5, 2]}
             form="ring" // circle | ring | rect (optional, default = rect)
             intensity={0.5} // power level (optional = 1)
             color="orange" // (optional = white)
@@ -94,10 +95,10 @@ export const Scene = ({ mainColor, path, ...props }) => {
             target={[0, 0, 0]}
           />
           <Lightformer
-            position={[0, 0, 5]}
+            position={[0, 0, -5]}
             form="rect" // circle | ring | rect (optional, default = rect)
             intensity={1} // power level (optional = 1)
-            color="purple" // (optional = white)
+            color="red" // (optional = white)
             scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
             target={[0, 0, 0]}
           />
