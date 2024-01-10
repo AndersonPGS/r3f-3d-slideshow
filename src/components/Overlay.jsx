@@ -33,14 +33,14 @@ export const Overlay = () => {
           <div className="flex items-center gap-12 mt-10">
 
             <a href="#">
-              <button className="pointer-events-auto hover:cursor-pointer font-semibold text-xl bg-red-500 px-4 py-3 rounded-lg text-white flex items-center justify-center gap-2">
+              <button className="pointer-events-auto hover:cursor-pointer w-44 font-semibold text-xl bg-red-500 px-4 py-3 rounded-lg text-white flex items-center justify-center gap-2">
                 <span>Adquirir</span>
                 <FaArrowRightLong size={18} />
               </button>
             </a>
 
             <a href="#">
-              <button className="pointer-events-auto hover:cursor-pointer font-semibold text-xl bg-black px-4 py-3 rounded-lg text-white flex items-center justify-center gap-2">
+              <button className="pointer-events-auto hover:cursor-pointer w-44 font-semibold text-xl bg-black px-4 py-3 rounded-lg text-white flex items-center justify-center gap-2">
                 <span>Saiba Mais</span>
                 <FaArrowDownLong size={18} />
               </button>
